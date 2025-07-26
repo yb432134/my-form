@@ -1,158 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Request Your Free Quote</title>
-<style>
-  /* Background gradient animation */
-  @keyframes gradientShift {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arabic Institute - Learn Arabic with Ismaaeel Meehan</title>
+    <meta name="description" content="Learn Arabic with Ismaaeel Meehan. Professional Arabic language instruction with proven methodology. 121 lessons taught. Get your free trial session today!">
+    <meta name="keywords" content="Arabic lessons, Arabic teacher, Arabic language, Islamic studies, Ismaaeel Meehan, Arabic tutor">
+    <meta name="author" content="Ismaaeel Meehan">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arabicwithismaaeel.com/">
+    <meta property="og:title" content="Arabic Institute - Learn Arabic with Ismaaeel Meehan">
+    <meta property="og:description" content="Professional Arabic language instruction with proven methodology. Get your free trial session today!">
+    <meta property="og:image" content="https://arabicwithismaaeel.com/og-image.jpg">
 
-  /* Fade-in and slide up animation for form elements */
-  @keyframes fadeSlideUp {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  body {
-    margin: 0;
-    background: #232f20;
-    font-family: Arial, sans-serif;
-    color: #fff;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-  }
-
-  #quote-form-container {
-    background: linear-gradient(270deg, #EBEDDE 0%, #C7D3C6 50%, #EBEDDE 100%);
-    background-size: 600% 600%;
-    animation: gradientShift 20s ease infinite;
-    padding: 20px 30px 30px;
-    max-width: 600px;
-    width: 100%;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    color: #232f20;
-  }
-
-  #quote-form-container h2 {
-    margin-top: 0;
-    color: #232f20;
-    animation: fadeSlideUp 1s ease forwards;
-  }
-
-  #quote-form-container p {
-    margin-top: 5px;
-    margin-bottom: 25px;
-    color: #232f20;
-    animation: fadeSlideUp 1s ease forwards;
-    animation-delay: 0.1s;
-  }
-
-  form {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-  }
-
-  label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 6px;
-    color: #232f20;
-    animation: fadeSlideUp 1s ease forwards;
-    animation-delay: 0.2s;
-  }
-
-  input {
-    width: 100%;
-    padding: 12px 15px;
-    border-radius: 12px;
-    border: 1px solid #999;
-    font-size: 1em;
-    box-sizing: border-box;
-    background-color: rgba(255 255 255 / 0.8);
-    color: #232f20;
-    animation: fadeSlideUp 1s ease forwards;
-    animation-delay: 0.3s;
-  }
-
-  input::placeholder {
-    color: #666;
-  }
-
-  button {
-    grid-column: 1 / -1;
-    padding: 20px;
-    background: linear-gradient(to right, #4C6E58, #738C77);
-    border: none;
-    border-radius: 12px;
-    color: white;
-    font-weight: bold;
-    font-size: 1.3em;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    animation: fadeSlideUp 1s ease forwards;
-    animation-delay: 0.4s;
-  }
-
-  button:hover {
-    background: linear-gradient(to right, #3b5948, #5f7262);
-  }
-
-  @media (max-width: 480px) {
-    form {
-      grid-template-columns: 1fr; /* stack on small screens */
-    }
-  }
-</style>
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://arabicwithismaaeel.com/">
+    <meta property="twitter:title" content="Arabic Institute - Learn Arabic with Ismaaeel Meehan">
+    <meta property="twitter:description" content="Professional Arabic language instruction with proven methodology. Get your free trial session today!">
+    <meta property="twitter:image" content="https://arabicwithismaaeel.com/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📖</text></svg>">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <div id="quote-form-container">
-    <h2>📱 Request Your Free Quote</h2>
-    <p>Fill out the quick form below — we’ll try contact you within 24 hours!</p>
-    <form action="https://formspree.io/f/xvgrpddd" method="POST" enctype="multipart/form-data">
-      <div>
-        <label for="first-name">First Name</label>
-        <input type="text" id="first-name" name="first_name" required placeholder="Enter your first name" />
-      </div>
-      <div>
-        <label for="last-name">Last Name</label>
-        <input type="text" id="last-name" name="last_name" required placeholder="Enter your last name" />
-      </div>
-      <div>
-        <label for="postal-code">Postal Code</label>
-        <input type="text" id="postal-code" name="postal_code" required placeholder="Enter your postal code" />
-      </div>
-      <div>
-        <label for="full-address">Full Address</label>
-        <input type="text" id="full-address" name="full_address" required placeholder="Enter your full address" />
-      </div>
-      <div>
-        <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number" />
-      </div>
-      <button type="submit">Get My Quote</button>
-    </form>
-  </div>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-indicator">
+        <div class="scroll-progress"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Arabic Institute</h2>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#testimonials" class="nav-link">Testimonials</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#contact" class="nav-link cta-btn">Free Trial</a>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Learn Arabic with <span class="highlight">Ismaaeel Meehan</span></h1>
+                <h2 class="hero-subtitle">121 Arabic Lessons</h2>
+                <p class="hero-description">Transform your Arabic learning journey with proven methodology and personalized guidance</p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn-primary">Enquire and get a FREE trial session!</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">121</span>
+                        <span class="stat-label">Lessons Taught</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Success Rate</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="arabic-calligraphy">
+                    <i class="fas fa-book-open"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">HEAR WHAT MY STUDENTS HAVE TO SAY</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Before taking lessons with Ismaeel, I found myself struggling to learn Arabic and came to a standstill. I discovered Ismaeel on YouTube, and I took the initiative to book a session with him. So far, I have already learnt a lot of vocabulary, grammatical rulings and sentence structures despite only having 10 lessons. Ismaeel is a great and concise teacher."
+                    </p>
+                    <div class="testimonial-author">
+                        <strong>- HENRY H.</strong>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Wonderful Arabic teacher and a very friendly and funny brother. Mashallah tabarakallah brother Ismaaeel knows what he is talking about, and I would highly recommend anyone looking to learn Arabic to come directly to this brother."
+                    </p>
+                    <div class="testimonial-author">
+                        <strong>- ISMAEEL A.</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">WHAT I OFFER</h2>
+            <div class="services-intro">
+                <p class="services-philosophy">
+                    I believe that to learn Arabic you need to make it a way of life. I have gathered years of experience and developed an effective methodology that I share with my students to allow them to learn Arabic in the most efficient way possible. I believe that anyone can learn Arabic as long as they are prepared to put in the hard work, but it also takes the right guidance...
+                </p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>Personalized Learning</h3>
+                    <p>One-on-one lessons tailored to your pace and learning style</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <h3>Proven Methodology</h3>
+                    <p>Years of experience condensed into an effective learning system</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Grammar & Vocabulary</h3>
+                    <p>Master grammatical rules and build extensive vocabulary</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mosque"></i>
+                    </div>
+                    <h3>Religious Understanding</h3>
+                    <p>Learn Arabic to deepen your understanding of Islam</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Flexible Scheduling</h3>
+                    <p>Learn around your busy schedule and responsibilities</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Proven Results</h3>
+                    <p>Join successful students who've achieved their Arabic goals</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">ABOUT ME</h2>
+                    <p>
+                        I'm Ismaaeel Meehan and I learnt Arabic whilst living in the UK. I became muslim at 24 years old and was instantly obsessed with learning the Arabic Language so that I could understand my religion. I had a family and a full time job so I know the struggle and what it takes to learn Arabic in the West when you have a lot of responsibilities and very little time, but if I can do it - so can you!
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Self-taught Arabic learner</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Understands Western learning challenges</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Balanced family and work while learning</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Passionate about Islamic knowledge</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-user-tie"></i>
+                        <p>Ismaaeel Meehan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>START YOUR JOURNEY TO UNDERSTANDING YOUR RELIGION</h2>
+                <p>Take the first step towards mastering Arabic and deepening your Islamic knowledge</p>
+                <a href="#contact" class="btn-secondary">Enquire Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get Your FREE Trial Session</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Ready to Start Learning?</h3>
+                    <p>Book your free trial session today and experience the effective methodology that has helped countless students master Arabic.</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <span>Send us an email</span>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <span>Schedule a call</span>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fab fa-youtube"></i>
+                            <span>Find us on YouTube</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="enquiryForm">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" placeholder="Your Phone Number">
+                        </div>
+                        <div class="form-group">
+                            <select name="experience" required>
+                                <option value="">Your Arabic Level</option>
+                                <option value="beginner">Complete Beginner</option>
+                                <option value="basic">Basic Knowledge</option>
+                                <option value="intermediate">Intermediate</option>
+                                <option value="advanced">Advanced</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Tell us about your Arabic learning goals..." rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Book FREE Trial Session</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Arabic Institute</h3>
+                    <p>Learn Arabic with Ismaaeel Meehan - Your path to understanding Islam through the Arabic language.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Get in touch for your free trial session</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Arabic Institute - Ismaaeel Meehan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
